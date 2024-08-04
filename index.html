@@ -4,10 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Contenedores Superpuestos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css"> <!--Eliminar despues de aplicar 7-1 y compilar con sass-->
     <link rel="stylesheet" href="./assets/css/main.css">
     <style>
         body, html {
+            /* font-family: "Roboto", sans-serif; */
+            font-family: "PT Mono", monospace;
+            font-weight: 400;
             margin: 0;
             padding: 0;
             width: 100%;
@@ -15,6 +24,39 @@
             display: flex;
             flex-direction: column;
         }
+        .nav{
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+    .nav__logo{
+        padding: 10px 10px 10px 20px;
+        display: flex;
+        align-items: center;
+    }
+    .nav__text{
+        color: black;
+        font-weight: 700;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 30px;
+    }
+    .nav__img{
+        width: 50px;
+        height: 50px;
+    }
+    .nav__link{
+        list-style: none;
+        display: flex;
+        background-color: yellow;
+        
+    }
+    a{
+        padding-right:10px ;
+        text-decoration: none ;
+        color: black ;
+        
+    }
         .main-content {
             display: flex;
             flex: 1;
@@ -42,7 +84,7 @@
         .container-left__text {
             padding: 20px;
             font-size: 18px;
-            width: 100%;
+            width: 40%;
         }
         .container-right {
             width: 40%;
@@ -52,7 +94,6 @@
             justify-content: space-between;
         }
         .container-rigth__title {
-            padding: 20px;
             color: red;
             font-size: 24px;
         }
@@ -77,20 +118,72 @@
             border: 1px solid black;
         }
         .overlay1 {
-            background-color: rgba(255, 0, 0, 0.5);
+            background-color: rgb(255, 0, 0);
             z-index: 1;
-            left: calc(50% - 20px);
-            top: calc(50% - 20px);
+            width: 500px;
+            height: 150px;
+            left: calc(50% - 60px);
+            top: calc(50% + 50px);
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
         }
         .overlay2 {
-            background-color: rgba(0, 0, 255, 0.5);
-            z-index: 5;
-            left: calc(50% - 10px);
-            top: calc(50% - 10px);
+            background-color: rgba(0, 0, 255);
+            z-index: 2;
+            width: 500px;
+            height: 300px;
+            left: calc(50% - 60px);
+            top: calc(50% + 250px);
         }
         .overlay3 {
-            background-color: rgba(0, 255, 0, 0.5);
+            background-color: rgb(0, 255, 0);
             z-index: 3;
+            width: 400px;
+            height: 250px;
+            left: calc(50% - 150px);
+            top: calc(50% + 300px);
+        }
+        .overlay4 {
+            background-color: rgb(255, 249, 64);
+            z-index: 4;
+            width: 150px;
+            height: 150px;
+            left: calc(50% + 265px);
+            top: calc(50% + 50px);
+        }
+        .overlay5 {
+            background-color: rgb(211, 68, 224);
+            z-index: 5;
+            width: 150px;
+            height: 150px;
+            left: calc(50% + 245px);
+            top: calc(50% + 20px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .overlay6 {
+            background-color: rgb(163, 229, 234);
+            z-index: 6;
+            width: 120px;
+            height: 250px;
+            left: calc(50% + 200px);
+            top: calc(50% + 245px);
+        }
+        .block{
+            padding: 50px;
+        }
+        .block__element{
+            display: block;
+        }
+        .overlay5__icon{
+            color: white;
+            font-size: 50px;
+        }
+        .overlay1__box{
+            background-color: white;
+            color: black;
         }
     </style>
 </head>
@@ -107,32 +200,60 @@
             <li><a href="https://www.mercadolibre.cl/">Mercado libre</a></li>
         </ul>
     </nav>
-    <div class="main-content">
-        <div class="container-left">
+    <main class="main-content">
+        <section class="container-left">
             <img src="./assets/img/img-1.png" alt="" class="container-left__img">
             <h2 class="container-left__title">Ven a conocernos</h2>
             <p class="container-left__text">Disfruta de una gran experiencia tomando un cafe o un te dentro de nuestra tienda o si prefieres puedes comprar en linea nuestros cafes para disfrutar en casa</p>
-        </div>
-        <div class="container-right">
-            <h2 class="container-rigth__title">
-                <span>Cafe</span>
-                <span>Agere</span>
-            </h2>
+        </section>
+        <section class="container-right">
+            <div class="block">
+                <h2 class="container-rigth__title">
+                    <span class="block__element">Cafe</span>
+                    <span class="block__element">Agere</span>
+                </h2>
+                <h3>Coffee Shop</h3>
+            </div>
+
             <div class="box">
                 <img class="container-right__img" src="./assets/img/img-2.png" alt="">
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <div class="overlay-container overlay1">
-        1
+        <div overlay1__box>
+            <h2>+50</h2>
+            <span>variedades de</span>
+            <span>cafe</span>
+        </div>
+        <div overlay1__box>
+            <h2>+50</h2>
+            <span>variedades de</span>
+            <span>cafe</span>
+        </div>
+        <div overlay1__box>
+            <h2>+50</h2>
+            <span>variedades de</span>
+            <span>cafe</span>
+        </div>
     </div>
     <div class="overlay-container overlay2">
         2
     </div>
     <div class="overlay-container overlay3">
-        3
+        <img src="./assets/img/img-4.png" alt="" style="width: 100%; height: 100%;object-fit: cover;">
     </div>
+    <div class="overlay-container overlay4">
+        4
+    </div>
+    <div class="overlay-container overlay5">
+        <i class="fa-solid fa-arrow-right overlay5__icon"></i>
+    </div>
+    <div class="overlay-container overlay6">
+        <img src="./assets/img/img-3.png" alt="" class="" style="width: 100%; height: 100%;object-fit: cover;">
+    </div>
+    <script src="https://kit.fontawesome.com/8873adeafd.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
