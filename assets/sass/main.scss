@@ -8,7 +8,11 @@
   'base/typography';
 
 @import
-  'layout/navigation';
+  'layout/navigation',
+  'layout/main-content';
 
 @import
-  'components/buttons';
+  'components/buttons',
+  'components/overlays',
+  'components/blocks',
+  'components/media-queries';

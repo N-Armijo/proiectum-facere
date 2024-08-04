@@ -1,0 +1,62 @@
+// components/_media-queries.scss
+@import '../abstracts/variables';
+
+@include media('laptop') {
+    .block {
+        padding-top: $padding-small;
+    }
+    .block__element {
+        font-size: $font-medium;
+    }
+    .box__block {
+        font-size: $font-xsmall;
+    }
+    .main-content__right-img {
+        height: 60%;
+    }
+    .main-content__left-title {
+        padding: $padding-medium 0 0 50px;
+    }
+    .main-content__left-text {
+        padding: 10px 20px 0 50px;
+    }
+    .overlay-container--1 {
+        height: 115px;
+        width: 410px;
+        left: calc(50% - 50px);
+        top: calc(50% + 40px);
+    }
+    .overlay1__box {
+        font-size: $font-xsmall;
+    }
+    .overlay-container--2 {
+        left: calc(50% - 50px);
+        top: calc(50% + 200px);
+        height: 205px;
+        width: 410px;
+    }
+    .overlay-container--3 {
+        left: calc(50% - 100px);
+        top: calc(50% + 225px);
+        width: 350px;
+        height: 160px;
+    }
+    .overlay-container--4 {
+        left: calc(50% + 210px);
+        top: calc(50% + 40px);
+        height: 115px;
+        width: 115px;
+    }
+    .overlay-container--5 {
+        left: calc(50% + 200px);
+        top: calc(50% + 10px);
+        height: 115px;
+        width: 115px;
+    }
+    .overlay-container--6 {
+        left: calc(50% + 160px);
+        top: calc(50% + 171px);
+        height: 150px;
+        width: 75px;
+    }
+}

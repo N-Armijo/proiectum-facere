@@ -1,3 +1,254 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
+body {
+  font-family: "PT Mono", monospace;
+  font-weight: 400;
+}
+
+.nav {
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.nav__logo {
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+}
+
+.nav__text {
+  color: black;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.nav__img {
+  width: auto;
+  height: 32px;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+}
+
+.nav__link {
+  padding-left: 30px;
+  text-decoration: none;
+  color: #989797;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+}
+.main-content__left, .main-content__right {
+  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
+}
+.main-content__left {
+  width: 60%;
+}
+.main-content__left-img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+.main-content__left-title {
+  padding: 50px 20px 20px 50px;
+  font-size: 30px;
+}
+.main-content__left-text {
+  padding: 20px 20px 20px 50px;
+  font-size: 18px;
+  width: 40%;
+}
+.main-content__right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main-content__right-text {
+  color: #454545;
+  font-size: 24px;
+}
+.main-content__right-box {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex: 1;
+}
+.main-content__right-img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.overlay-container {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.overlay-container--1 {
+  background-color: #fff;
+  z-index: 1;
+  width: 500px;
+  height: 150px;
+  left: calc(50% - 60px);
+  top: calc(50% + 50px);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.overlay-container--2 {
+  background-color: #3c91e6;
+  z-index: 2;
+  width: 503px;
+  height: 300px;
+  left: calc(50% - 60px);
+  top: calc(50% + 270px);
+}
+.overlay-container--3 {
+  z-index: 3;
+  width: 400px;
+  height: 250px;
+  left: calc(50% - 150px);
+  top: calc(50% + 300px);
+}
+.overlay-container--3-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.overlay-container--4 {
+  background-color: #f1dd7b;
+  z-index: 4;
+  width: 150px;
+  height: 150px;
+  left: calc(50% + 265px);
+  top: calc(50% + 50px);
+}
+.overlay-container--5 {
+  background-color: #e4572e;
+  z-index: 5;
+  width: 150px;
+  height: 150px;
+  left: calc(50% + 245px);
+  top: calc(50% + 20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay-container--6 {
+  z-index: 6;
+  width: 120px;
+  height: 250px;
+  left: calc(50% + 200px);
+  top: calc(50% + 240px);
+}
+.overlay-container--6-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.block {
+  padding: 20px;
+}
+.block__element {
+  display: block;
+  font-size: 70px;
+}
+.block-box {
+  display: block;
+}
+
+.overlay1__box {
+  background-color: #ffffff;
+  color: black;
+  text-align: left;
+  font-size: 18px;
+}
+
+.overlay5__icon {
+  color: #ffffff;
+  font-size: 80px;
+}
+
+@media (max-width: 1800px) {
+  .block {
+    padding-top: 10px;
+  }
+  .block__element {
+    font-size: 30px;
+  }
+  .box__block {
+    font-size: 0.75rem;
+  }
+  .main-content__right-img {
+    height: 60%;
+  }
+  .main-content__left-title {
+    padding: 20px 0 0 50px;
+  }
+  .main-content__left-text {
+    padding: 10px 20px 0 50px;
+  }
+  .overlay-container--1 {
+    height: 115px;
+    width: 410px;
+    left: calc(50% - 50px);
+    top: calc(50% + 40px);
+  }
+  .overlay1__box {
+    font-size: 0.75rem;
+  }
+  .overlay-container--2 {
+    left: calc(50% - 50px);
+    top: calc(50% + 200px);
+    height: 205px;
+    width: 410px;
+  }
+  .overlay-container--3 {
+    left: calc(50% - 100px);
+    top: calc(50% + 225px);
+    width: 350px;
+    height: 160px;
+  }
+  .overlay-container--4 {
+    left: calc(50% + 210px);
+    top: calc(50% + 40px);
+    height: 115px;
+    width: 115px;
+  }
+  .overlay-container--5 {
+    left: calc(50% + 200px);
+    top: calc(50% + 10px);
+    height: 115px;
+    width: 115px;
+  }
+  .overlay-container--6 {
+    left: calc(50% + 160px);
+    top: calc(50% + 171px);
+    height: 150px;
+    width: 75px;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

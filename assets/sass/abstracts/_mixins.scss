@@ -1,0 +1,14 @@
+// abstracts/_mixins.scss
+@mixin media($breakpoint) {
+    @if $breakpoint == 'laptop' {
+        @media (max-width: 1800px) {
+            @content;
+        }
+    }
+}
+
+// @mixin overlay-text {
+//     color: $overlay-text-color;
+//     font-size: $overlay-font-size-text;
+//     text-align: center; // Alineación del texto, ajusta si es necesario
+// }

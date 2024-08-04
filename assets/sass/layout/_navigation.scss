@@ -1,0 +1,35 @@
+// layout/_navigation.scss
+.nav {
+    height: 80px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.nav__logo {
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+}
+
+.nav__text {
+    color: $color-black;
+    font-weight: 700;
+    font-size: $font-medium;
+}
+
+.nav__img {
+    width: auto;
+    height: 32px;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+}
+
+.nav__link {
+    padding-left: 30px;
+    text-decoration: none;
+    color: $color-grey;
+}
