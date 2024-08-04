@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contenedores Superpuestos</title>
+    <link rel="stylesheet" href="./assets/css/style.css"> <!--Eliminar despues de aplicar 7-1 y compilar con sass-->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .main-content {
+            display: flex;
+            flex: 1;
+            width: 100%;
+            overflow: hidden;
+        }
+        .container-left, .container-right {
+            box-sizing: border-box;
+            height: 100%;
+            overflow: hidden;
+        }
+        .container-left {
+            width: 60%;
+            background-color: lightblue;
+        }
+        .container-left__img {
+            width: 100%;
+            height: 60%;
+            object-fit: cover;
+        }
+        .container-left__title {
+            padding: 20px;
+            font-size: 30px;
+        }
+        .container-left__text {
+            padding: 20px;
+            font-size: 18px;
+            width: 100%;
+        }
+        .container-right {
+            width: 40%;
+            background-color: lightgreen;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .container-rigth__title {
+            padding: 20px;
+            color: red;
+            font-size: 24px;
+        }
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            flex: 1;
+        }
+        .container-right__img {
+            width: 100%;
+            height: 45%;
+            object-fit: cover;
+        }
+        .overlay-container {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid black;
+        }
+        .overlay1 {
+            background-color: rgba(255, 0, 0, 0.5);
+            z-index: 1;
+            left: calc(50% - 20px);
+            top: calc(50% - 20px);
+        }
+        .overlay2 {
+            background-color: rgba(0, 0, 255, 0.5);
+            z-index: 5;
+            left: calc(50% - 10px);
+            top: calc(50% - 10px);
+        }
+        .overlay3 {
+            background-color: rgba(0, 255, 0, 0.5);
+            z-index: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav__logo">
+            <img class="nav__img" src="./assets/img/logo.png" alt="">
+            <span class="nav__text">GATO SOMALI</span>
+        </div>
+        <ul class="nav__link">
+            <li><a href="https://www.mercadolibre.cl/">Mercado libre</a></li>
+            <li><a href="https://www.mercadolibre.cl/">Mercado libre</a></li>
+            <li><a href="https://www.mercadolibre.cl/">Mercado libre</a></li>
+        </ul>
+    </nav>
+    <div class="main-content">
+        <div class="container-left">
+            <img src="./assets/img/img-1.png" alt="" class="container-left__img">
+            <h2 class="container-left__title">Ven a conocernos</h2>
+            <p class="container-left__text">Disfruta de una gran experiencia tomando un cafe o un te dentro de nuestra tienda o si prefieres puedes comprar en linea nuestros cafes para disfrutar en casa</p>
+        </div>
+        <div class="container-right">
+            <h2 class="container-rigth__title">
+                <span>Cafe</span>
+                <span>Agere</span>
+            </h2>
+            <div class="box">
+                <img class="container-right__img" src="./assets/img/img-2.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay-container overlay1">
+        1
+    </div>
+    <div class="overlay-container overlay2">
+        2
+    </div>
+    <div class="overlay-container overlay3">
+        3
+    </div>
+</body>
+
+</html>
