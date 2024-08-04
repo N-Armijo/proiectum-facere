@@ -21,13 +21,13 @@
         }
 
         &-title {
-            padding: 50px 20px 20px 50px;
-            font-size: 30px;
+            padding: 3.125rem 1.25rem 1.25rem 3.125rem; 
+            font-size: 1.875rem; 
         }
 
         &-text {
-            padding: 20px 20px 20px 50px;
-            font-size: 18px;
+            padding: 1.25rem 1.25rem 1.25rem 3.125rem; 
+            font-size: 1.125rem; 
             width: 40%;
         }
     }
@@ -40,13 +40,13 @@
 
         &-text {
             color: $color-dark;
-            font-size: 24px;
+            font-size: 1.5rem; // 24px
         }
-        &-box{
+        &-box {
             display: flex;
-                justify-content: center;
-                align-items: flex-end;
-                flex: 1;
+            justify-content: center;
+            align-items: flex-end;
+            flex: 1;
         }
         &-img {
             width: 100%;

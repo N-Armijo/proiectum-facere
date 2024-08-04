@@ -7,8 +7,14 @@
     }
 }
 
-// @mixin overlay-text {
-//     color: $overlay-text-color;
-//     font-size: $overlay-font-size-text;
-//     text-align: center; // Alineación del texto, ajusta si es necesario
-// }
+@mixin button-styles($bg-color) {
+    width: 10rem;
+    background-color: $bg-color; // Color de fondo
+    font-family: $font-family-roboto; //letra de boton diferente a todo el estilo de la pagina
+    font-weight: 300; //roboto light de 300
+    border: none;                 // Sin borde
+    padding: 0.625rem 1.25rem;   // Espaciado interno 
+    margin-left: 0.625rem;       // Margen izquierdo 
+    font-size: 1rem;             // Tamaño de fuente 
+    cursor: pointer;             // Cursor de puntero
+}

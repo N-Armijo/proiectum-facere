@@ -13,38 +13,38 @@ body {
 }
 
 .nav {
-  height: 80px;
+  height: 5rem;
   display: flex;
   justify-content: start;
   align-items: center;
 }
-
-.nav__logo {
-  padding: 10px 30px;
+.navlogo {
+  padding: 0.625rem 1.875rem;
   display: flex;
   align-items: center;
 }
-
 .nav__text {
   color: black;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 2rem;
 }
-
 .nav__img {
+  padding-left: 1.875rem;
   width: auto;
-  height: 32px;
+  height: 2rem;
 }
-
 .nav__links {
   list-style: none;
   display: flex;
 }
-
 .nav__link {
-  padding-left: 30px;
+  padding-left: 1.875rem;
   text-decoration: none;
   color: #989797;
+}
+.nav__buttons {
+  margin-left: auto;
+  margin-right: 3.125rem;
 }
 
 .main-content {
@@ -67,12 +67,12 @@ body {
   object-fit: cover;
 }
 .main-content__left-title {
-  padding: 50px 20px 20px 50px;
-  font-size: 30px;
+  padding: 3.125rem 1.25rem 1.25rem 3.125rem;
+  font-size: 1.875rem;
 }
 .main-content__left-text {
-  padding: 20px 20px 20px 50px;
-  font-size: 18px;
+  padding: 1.25rem 1.25rem 1.25rem 3.125rem;
+  font-size: 1.125rem;
   width: 40%;
 }
 .main-content__right {
@@ -83,7 +83,7 @@ body {
 }
 .main-content__right-text {
   color: #454545;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 .main-content__right-box {
   display: flex;
@@ -97,10 +97,51 @@ body {
   object-fit: cover;
 }
 
+.button--primary {
+  width: 10rem;
+  background-color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  border: none;
+  padding: 0.625rem 1.25rem;
+  margin-left: 0.625rem;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: 0.0625rem solid black;
+}
+.button--primary:hover {
+  color: #989797;
+  outline: 0.0625rem solid #989797;
+}
+.button--primary:focus {
+  color: #989797;
+  outline: 0.0625rem solid #989797;
+}
+
+.button--secondary {
+  width: 10rem;
+  background-color: #4ca866;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  border: none;
+  padding: 0.625rem 1.25rem;
+  margin-left: 0.625rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.button--secondary:hover {
+  background-color: #9dcfab;
+  color: #ffffff;
+}
+.button--secondary:focus {
+  color: black;
+  outline: 0.0625rem solid #989797;
+}
+
 .overlay-container {
   position: absolute;
-  width: 80px;
-  height: 80px;
+  width: 5rem;
+  height: 5rem;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -108,10 +149,10 @@ body {
 .overlay-container--1 {
   background-color: #fff;
   z-index: 1;
-  width: 500px;
-  height: 150px;
-  left: calc(50% - 60px);
-  top: calc(50% + 50px);
+  width: 31.25rem;
+  height: 9.375rem;
+  left: calc(50% - 3.75rem);
+  top: calc(50% + 3.125rem);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -119,17 +160,17 @@ body {
 .overlay-container--2 {
   background-color: #3c91e6;
   z-index: 2;
-  width: 503px;
-  height: 300px;
-  left: calc(50% - 60px);
-  top: calc(50% + 270px);
+  width: 31.4375rem;
+  height: 18.75rem;
+  left: calc(50% - 3.75rem);
+  top: calc(50% + 16.875rem);
 }
 .overlay-container--3 {
   z-index: 3;
-  width: 400px;
-  height: 250px;
-  left: calc(50% - 150px);
-  top: calc(50% + 300px);
+  width: 25rem;
+  height: 15.625rem;
+  left: calc(50% - 9.375rem);
+  top: calc(50% + 18.75rem);
 }
 .overlay-container--3-img {
   width: 100%;
@@ -139,28 +180,28 @@ body {
 .overlay-container--4 {
   background-color: #f1dd7b;
   z-index: 4;
-  width: 150px;
-  height: 150px;
-  left: calc(50% + 265px);
-  top: calc(50% + 50px);
+  width: 9.375rem;
+  height: 9.375rem;
+  left: calc(50% + 16.5625rem);
+  top: calc(50% + 3.125rem);
 }
 .overlay-container--5 {
   background-color: #e4572e;
   z-index: 5;
-  width: 150px;
-  height: 150px;
-  left: calc(50% + 245px);
-  top: calc(50% + 20px);
+  width: 9.375rem;
+  height: 9.375rem;
+  left: calc(50% + 15.3125rem);
+  top: calc(50% + 1.25rem);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .overlay-container--6 {
   z-index: 6;
-  width: 120px;
-  height: 250px;
-  left: calc(50% + 200px);
-  top: calc(50% + 240px);
+  width: 7.5rem;
+  height: 15.625rem;
+  left: calc(50% + 12.5rem);
+  top: calc(50% + 15rem);
 }
 .overlay-container--6-img {
   width: 100%;
@@ -169,11 +210,11 @@ body {
 }
 
 .block {
-  padding: 20px;
+  padding: 1.2rem;
 }
 .block__element {
   display: block;
-  font-size: 70px;
+  font-size: 4.38rem;
 }
 .block-box {
   display: block;
@@ -183,20 +224,20 @@ body {
   background-color: #ffffff;
   color: black;
   text-align: left;
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 .overlay5__icon {
   color: #ffffff;
-  font-size: 80px;
+  font-size: 5rem;
 }
 
 @media (max-width: 1800px) {
   .block {
-    padding-top: 10px;
+    padding-top: 0.85rem;
   }
   .block__element {
-    font-size: 30px;
+    font-size: 2rem;
   }
   .box__block {
     font-size: 0.75rem;
@@ -205,49 +246,49 @@ body {
     height: 60%;
   }
   .main-content__left-title {
-    padding: 20px 0 0 50px;
+    padding: 1.2rem 0 0 3.125rem;
   }
   .main-content__left-text {
-    padding: 10px 20px 0 50px;
+    padding: 0.625rem 1.25rem 0 3.125rem;
   }
   .overlay-container--1 {
-    height: 115px;
-    width: 410px;
-    left: calc(50% - 50px);
-    top: calc(50% + 40px);
+    height: 7.1875rem;
+    width: 25.625rem;
+    left: calc(50% - 3.125rem);
+    top: calc(50% + 2.5rem);
   }
   .overlay1__box {
     font-size: 0.75rem;
   }
   .overlay-container--2 {
-    left: calc(50% - 50px);
-    top: calc(50% + 200px);
-    height: 205px;
-    width: 410px;
+    left: calc(50% - 3.125rem);
+    top: calc(50% + 12.5rem);
+    height: 12.8125rem;
+    width: 25.625rem;
   }
   .overlay-container--3 {
-    left: calc(50% - 100px);
-    top: calc(50% + 225px);
-    width: 350px;
-    height: 160px;
+    left: calc(50% - 6.25rem);
+    top: calc(50% + 14.0625rem);
+    width: 21.875rem;
+    height: 10rem;
   }
   .overlay-container--4 {
-    left: calc(50% + 210px);
-    top: calc(50% + 40px);
-    height: 115px;
-    width: 115px;
+    left: calc(50% + 13.125rem);
+    top: calc(50% + 2.5rem);
+    height: 7.1875rem;
+    width: 7.1875rem;
   }
   .overlay-container--5 {
-    left: calc(50% + 200px);
-    top: calc(50% + 10px);
-    height: 115px;
-    width: 115px;
+    left: calc(50% + 12.5rem);
+    top: calc(50% + 0.625rem);
+    height: 7.1875rem;
+    width: 7.1875rem;
   }
   .overlay-container--6 {
-    left: calc(50% + 160px);
-    top: calc(50% + 171px);
-    height: 150px;
-    width: 75px;
+    left: calc(50% + 10rem);
+    top: calc(50% + 10.6875rem);
+    height: 9.375rem;
+    width: 4.6875rem;
   }
 }
 
